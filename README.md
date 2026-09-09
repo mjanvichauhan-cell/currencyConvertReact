@@ -108,8 +108,6 @@ The currency data is then used to create the currency dropdown options and perfo
 
 The project uses the Currency API to fetch exchange rates.
 
-Example API endpoint:
-
 https://latest.currency-api.pages.dev/v1/currencies/usd.json
 
 The API returns exchange-rate information for the selected currency.
