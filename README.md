@@ -52,6 +52,7 @@ currencyConverter/
 ├── package.json
 ├── vite.config.js
 └── README.md
+```
 
 ## 🧩 Components
 InputBox
