@@ -1,16 +1,142 @@
-# React + Vite
+# 💱 Currency Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive Currency Converter built using React.js and Tailwind CSS.
 
-Currently, two official plugins are available:
+This application allows users to enter an amount, select a source currency and a target currency, and convert the amount using exchange rates fetched from an API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- 💰 Convert between different currencies
+- 🔄 Swap From and To currencies
+- 🔽 Dynamic currency dropdowns
+- 📊 Fetch currency exchange rates from an API
+- ⚡ Built with React Hooks
+- 🎨 Responsive UI using Tailwind CSS
+- 📱 Mobile-friendly design
+- 🧩 Reusable InputBox component
+- 🔌 Custom useCurrencyInfo hook
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies Used
 
-## Expanding the ESLint configuration
+- React.js
+- JavaScript
+- Tailwind CSS
+- Vite
+- HTML5
+- CSS3
+- Currency API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Project Structure
+
+```text
+currencyConverter/
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   │
+│   ├── components/
+│   │   ├── Index.js
+│   │   └── InputBox.jsx
+│   │
+│   ├── hooks/
+│   │   └── useCurrencyInfo.js
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+
+## 🧩 Components
+InputBox
+
+InputBox is a reusable component used for both currency input sections.
+
+It handles:
+
+- Amount input
+- Currency selection
+- Currency options
+- Input disabling
+- Currency dropdown
+- User input changes
+
+The component receives data through props such as:
+
+- label
+- amount
+- onAmountChange
+- onCurrencyChange
+- currencyOptions
+- selectCurrency
+- amountDisable
+- currencyDisable
+
+## App
+
+App.jsx is the main component of the application.
+
+It manages:
+
+- Amount
+- From currency
+- To currency
+- Converted amount
+- Currency swapping
+- Currency conversion
+- 🔌 Custom Hook
+- useCurrencyInfo
+
+**useCurrencyInfo.js is a custom React Hook created to fetch currency exchange-rate data from the API.**
+
+It uses:
+
+- useState
+- useEffect
+- Fetch API
+
+The currency data is then used to create the currency dropdown options and perform the conversion.
+
+## 📡 API
+
+The project uses the Currency API to fetch exchange rates.
+
+Example API endpoint:
+
+https://latest.currency-api.pages.dev/v1/currencies/usd.json
+
+The API returns exchange-rate information for the selected currency.
+
+## 🎨 Styling
+
+The application uses Tailwind CSS for styling.
+
+- Responsive layouts
+- Buttons
+- Input boxes
+- Currency dropdowns
+- Background image
+- Spacing and alignment
+
+## ⚛️ React Concepts Used
+- useState:Used to store and update application data.
+- useEffect:Used to fetch currency data whenever the selected currency changes.
+- useId:Used in InputBox to create a unique ID for the input and label.
+- Props:Props are used to pass data and functions from App.jsx to InputBox.jsx.
+- Custom Hooks:The useCurrencyInfo custom Hook separates API-related logic from the main application component.
+
+## 👨‍💻 Author
+
+Janvi chauhan
+
+⭐ Support
+
+If you like this project, please give it a ⭐ on GitHub.
+
+Made with ❤️ using React.js and Tailwind CSS.
